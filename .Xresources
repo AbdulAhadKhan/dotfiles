@@ -1,0 +1,46 @@
+#include "/home/abdulahadkhan/.colors/muzieca-pastel"
+
+
+! URxvt
+
+!! Styling
+
+URxvt.font:		xft:UW\ Ttyp0:size=11:style=Regular
+URxvt.boldFont:		xft:UW\ Ttyp0:size=11:style=Bold
+URxvt.ItalicFont:	xft:UW\ Ttyp0:size=11:style=Italic
+URxvt.letterSpace:	0
+URxvt.lineSpace:	0
+URxvt.cursorBlink:	true
+URxvt.scrollBar:	false
+URxvt.internalBorder:	50
+URxvt.perl-ext-common:	ibeamcursor
+
+! Colors
+
+*.foreground:		FOREGROUND
+*.background:		BACKGROUND
+*.cursorColor:		CURSORCOLOR
+
+*.color0:		COLOR0
+*.color8:		COLOR8
+
+*.color1:		COLOR1
+*.color9:		COLOR9
+
+*.color2:		COLOR2
+*.color10:		COLOR10
+
+*.color3:		COLOR3
+*.color11:		COLOR10
+
+*.color4:		COLOR4
+*.color12:		COLOR12
+
+*.color5:		COLOR5
+*.color13:		COLOR13
+
+*.color6:		COLOR6
+*.color14:		COLOR14
+
+*.color7:		COLOR7
+*.color15:		COLOR15
