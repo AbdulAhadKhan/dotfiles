@@ -6,7 +6,7 @@ bspwm
 sxhkd
 polybar
 rofi
-picom
+picom-ibhagwan-git
 feh
 rxvt-unicode
 nano
