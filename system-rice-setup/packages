@@ -1,0 +1,14 @@
+xorg
+xorg-xinit
+lightdm
+lightdm-gtk-greeter
+bspwm
+sxhkd
+polybar
+rofi
+picom
+feh
+rxvt-unicode
+nano
+visual-studio-code-bin
+firefox
