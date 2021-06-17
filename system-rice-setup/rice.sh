@@ -20,7 +20,7 @@ confirm() {
     fi
 }
 
-printf "${GREEN}
+printf "${BLUE}
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # #                                                     # #
@@ -37,13 +37,13 @@ confirm
 
 # Packages
 ## Update
-printf "${BLUE}\nUpdating your system...\n${NON}"
+printf "${YELLOW}\nUpdating your system...\n${NON}"
 
 sudo pacman -Syu
 sudo pacman -S --needed git base-devel
 
 ## Yay AUR Helper
-printf "${BLUE}\nInstalling Yay...\n${NON}"
+printf "${YELLOW}\nInstalling Yay...\n${NON}"
 
 cd /opt
 sudo git clone https://aur.archlinux.org/yay-git.git
@@ -56,17 +56,29 @@ cd $HOME
 yay -Syu
 
 ## Packages From List
-printf "${BLUE}\nThe following packages will be installed:\n${NON}"
+printf "${YELLOW}\nThe following packages will be installed:\n${NON}"
 
 cat $PKGLIST
 
-printf "${BLUE}\nIf there are any packages you wish not to install, remove them from the packges file now.\n${NON}"
+printf "${YELLOW}\nIf there are any packages you wish not to install, remove them from the packges file now.\n${NON}"
 confirm
 
 yay -S - < $PKGLIST
 
+# Configurations
+
+## LightDM
+printf "${YELLOW}\nEnabling LightDM Service\n${NON}"
+
+sudo systemctl enable lightdm.service
+
+## Polybar
+printf "${YELLOW}\nSetting up Polybar configurations\n${NON}"
+
+polybar --config=$HOME/.config/polybar/
+
 ## Font installation
-printf "${BLUE}\nSetting up fonts\n${NON}"
+printf "${YELLOW}\nSetting up fonts\n${NON}"
 
 mkdir -p $HOME/fonts
 
@@ -86,4 +98,4 @@ sudo git clone https://github.com/addy-dclxvi/bitmap-font-collections.git /usr/l
 
 sudo fc-cache -fv
 
-printf "${YELLOW}Setup complete. Some changes take effect when you log out.${NON}\n"
+printf "${GREEN}Setup complete. Some changes take effect when you log in again.${NON}\n"
