@@ -56,4 +56,4 @@ export PS1="\[\e[32m\][\[\e[m\]\[\e[32m\]\u\[\e[m\]\[\e[32m\]:\[\e[m\]\[\e[32m\]
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias dotshare='git --git-dir=/home/abdulahadkhan/.dotfiles.git/ --work-tree=/home/abdulahadkhan'
+alias dotshare='git --git-dir=/home/abdulahadkhan/.dotfiles/ --work-tree=/home/abdulahadkhan'

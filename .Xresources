@@ -5,9 +5,9 @@
 
 !! Styling
 
-URxvt.font:		xft:UW\ Ttyp0:size=11:style=Regular
-URxvt.boldFont:		xft:UW\ Ttyp0:size=11:style=Bold
-URxvt.ItalicFont:	xft:UW\ Ttyp0:size=11:style=Italic
+URxvt.font:		xft:UW\ Ttyp0:size=14:style=Regular
+URxvt.boldFont:		xft:UW\ Ttyp0:size=14:style=Bold
+URxvt.ItalicFont:	xft:UW\ Ttyp0:size=14:style=Italic
 URxvt.letterSpace:	0
 URxvt.lineSpace:	0
 URxvt.cursorBlink:	true

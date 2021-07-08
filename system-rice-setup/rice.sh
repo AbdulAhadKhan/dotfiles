@@ -37,10 +37,10 @@ confirm
 
 # Packages
 ## Update
-printf "${YELLOW}\nUpdating your system...\n${NON}"
+: ' printf "${YELLOW}\nUpdating your system...\n${NON}"
 
 sudo pacman -Syu
-sudo pacman -S --needed git base-devel
+# sudo pacman -S --needed git base-devel
 
 ## Yay AUR Helper
 printf "${YELLOW}\nInstalling Yay...\n${NON}"
@@ -70,7 +70,6 @@ yay -S - < $PKGLIST
 ## LightDM
 printf "${YELLOW}\nEnabling LightDM Service\n${NON}"
 
-sudo systemctl enable lightdm.service
 
 ## Polybar
 printf "${YELLOW}\nSetting up Polybar configurations\n${NON}"
@@ -81,7 +80,7 @@ polybar --config=$HOME/.config/polybar/
 printf "${YELLOW}\nSetting up fonts\n${NON}"
 
 mkdir -p $HOME/fonts
-
+: '
 ### UW Ttyp0 1.3
 curl -o $HOME/fonts/UW-Ttyp0 https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/uw-ttyp0-1.3.tar.gz
 tar -xf $HOME/fonts/UW-Ttyp0 -C $HOME/fonts/
@@ -92,10 +91,10 @@ sudo make install
 
 cd $HOME
 
-### Addy's Fonts
+### Addys Fonts
 sudo mkdir -p /usr/local/share/fonts/
 sudo git clone https://github.com/addy-dclxvi/bitmap-font-collections.git /usr/local/share/fonts/misc
 
 sudo fc-cache -fv
-
+'
 printf "${GREEN}Setup complete. Some changes take effect when you log in again.${NON}\n"
